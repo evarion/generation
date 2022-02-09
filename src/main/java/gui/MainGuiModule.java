@@ -1,11 +1,11 @@
 package gui;
+
 import src.main.Generation;
 
 import javax.swing.*;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
-
 
 
 public class MainGuiModule extends JFrame {
@@ -31,7 +31,6 @@ public class MainGuiModule extends JFrame {
         int num = 0;
         if (year.trim().length() != 0) {
             num = Integer.parseInt(year);
-            //System.out.println("из меторад inputData " + num);
             return num;
         } else {
             System.out.println(num);
@@ -39,11 +38,11 @@ public class MainGuiModule extends JFrame {
         }
 
     }
-    public String setYear(int year,int generate){
+
+    public String setYear(int year, int generate) {
         Generation generation = new Generation();
         String result;
-        result = generation.calculationBigInteger(year,generate);
-        //System.out.println(year+"из метода сетгод");
+        result = generation.calculationBigInteger(year, generate);
         return result;
     }
 }

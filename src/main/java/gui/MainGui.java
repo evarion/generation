@@ -26,11 +26,14 @@ public class MainGui extends JFrame {
     JTextField inputCountGeneration = new JTextField();
 
     JButton buttonOk = new JButton("Ok");
-    JButton buttonExit = new JButton("Exit");
+    //JButton buttonExit = new JButton("Exit");
+
+    JLabel labelYear = new JLabel("ВВЕДИТЕ ГОД ВАШЕГО РОЖДЕНИЯ");
+    JLabel labelGeneration = new JLabel("ВВЕДИТЕ ЧИСЛО ПОКОЛЕНИЙ");
 
 
     JTextArea textResultArea = new JTextArea();
-    private JScrollPane scroll;
+    JScrollPane scroll;
 
     public MainGui() {
         super("App");
@@ -54,15 +57,16 @@ public class MainGui extends JFrame {
 
         jPaneLeftTop.add(jPanelEmpty0);
         jPaneLeftTop.add(inputYear);
+        jPaneLeftTop.add(labelYear);
         jPaneLeftTop.add(jPanelEmpty1);
         jPaneLeftTop.add(inputCountGeneration);
+        jPaneLeftTop.add(labelGeneration);
         jPaneLeftTop.add(jPanelEmpty2);
         jPaneLeftTop.add(buttonOk);
 
         add(jPanelRightMain);
         scroll = new JScrollPane(textResultArea);
         jPanelRightMain.add(scroll);
-
 
         setPanels();
         setInputYear();
@@ -83,7 +87,9 @@ public class MainGui extends JFrame {
         jPanelLeftMain.setLayout(new GridLayout(2, 1));
 
         jPaneLeftTop.setBackground(Color.ORANGE);
-        jPaneLeftTop.setLayout(new BoxLayout(jPaneLeftTop, BoxLayout.X_AXIS));
+        //jPaneLeftTop.setLayout(new BoxLayout(jPaneLeftTop, BoxLayout.X_AXIS));
+        jPaneLeftTop.setLayout(new BoxLayout(jPaneLeftTop, BoxLayout.Y_AXIS));
+
 
         jPanelRightMain.setBackground(Color.LIGHT_GRAY);
         jPanelRightMain.setLayout(new BoxLayout(jPanelRightMain, BoxLayout.Y_AXIS));
@@ -93,9 +99,10 @@ public class MainGui extends JFrame {
     private void setInputYear() {
         inputYear.setBackground(Color.cyan);
 
-        inputYear.setPreferredSize(new Dimension(80, 30));
-        inputYear.setMaximumSize(new Dimension(150, 30));
+        inputYear.setPreferredSize(new Dimension(400, 30));
+        inputYear.setMaximumSize(new Dimension(400, 30));
         mainGuiModule.limitInput(inputYear, 4);
+
     }
 
     private void setButtonOk() {
@@ -104,8 +111,8 @@ public class MainGui extends JFrame {
     }
 
     private void setInputCountGeneration() {
-        inputCountGeneration.setPreferredSize(new Dimension(80, 30));
-        inputCountGeneration.setMaximumSize(new Dimension(150, 30));
+        inputCountGeneration.setPreferredSize(new Dimension(400, 30));
+        inputCountGeneration.setMaximumSize(new Dimension(400, 30));
         mainGuiModule.limitInput(inputCountGeneration, 2);
     }
 
@@ -119,8 +126,6 @@ public class MainGui extends JFrame {
     }
 
     private void setLabelResultText(String inputText) {
-
-
         textResultArea.setText(inputText);
 
 
