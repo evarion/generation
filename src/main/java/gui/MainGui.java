@@ -28,7 +28,9 @@ public class MainGui extends JFrame {
     JButton buttonOk = new JButton("Ok");
     JButton buttonExit = new JButton("Exit");
 
-    JLabel textResult = new JLabel();
+
+    JTextArea textResultArea = new JTextArea();
+    private JScrollPane scroll;
 
     public MainGui() {
         super("App");
@@ -58,7 +60,9 @@ public class MainGui extends JFrame {
         jPaneLeftTop.add(buttonOk);
 
         add(jPanelRightMain);
-        jPanelRightMain.add(textResult);
+        scroll = new JScrollPane(textResultArea);
+        jPanelRightMain.add(scroll);
+
 
         setPanels();
         setInputYear();
@@ -115,7 +119,9 @@ public class MainGui extends JFrame {
     }
 
     private void setLabelResultText(String inputText) {
-        textResult.setText(inputText);
+
+
+        textResultArea.setText(inputText);
 
 
     }
