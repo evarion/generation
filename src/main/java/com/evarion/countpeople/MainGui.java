@@ -1,14 +1,19 @@
 package com.evarion.countpeople;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 
 public class MainGui extends JFrame {
 
     MainGuiModule mainGuiModule = new MainGuiModule(); //проверить возоможность через импорт
+    ImageIcon imageIcon = new ImageIcon("images/picture.png");
+    JLabel imageIconLabel = new JLabel();
 
 
     String resultFinal = "";
@@ -46,7 +51,8 @@ public class MainGui extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(1, 2));
         setLocation(200, 40);
-        setMinimumSize(new Dimension(1300, 720));
+        setMinimumSize(new Dimension(1600, 900));
+
     }
 
 
@@ -67,6 +73,8 @@ public class MainGui extends JFrame {
         add(jPanelRightMain);
         scroll = new JScrollPane(textResultArea);
         jPanelRightMain.add(scroll);
+
+        jPanelLeftDown.add(imageIconLabel);
 
         setPanels();
         setInputYear();
@@ -93,6 +101,10 @@ public class MainGui extends JFrame {
 
         jPanelRightMain.setBackground(Color.LIGHT_GRAY);
         jPanelRightMain.setLayout(new BoxLayout(jPanelRightMain, BoxLayout.Y_AXIS));
+
+        imageIconLabel.setIcon(imageIcon);
+
+
     }
 
 
