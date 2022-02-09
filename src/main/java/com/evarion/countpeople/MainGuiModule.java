@@ -1,6 +1,4 @@
-package gui;
-
-import src.main.Generation;
+package com.evarion.countpeople;
 
 import javax.swing.*;
 import javax.swing.text.AttributeSet;
@@ -12,7 +10,7 @@ public class MainGuiModule extends JFrame {
 
     public void limitInput(JTextField inputTextField, final int limitField) {
         inputTextField.setDocument(new PlainDocument() {//ограничение на jTextField
-            String chars = "0123456789.";
+            final String chars = "0123456789.";
 
 
             @Override

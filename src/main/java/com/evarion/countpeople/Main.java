@@ -1,11 +1,8 @@
-package src.main;
+package com.evarion.countpeople;
 
-import gui.MainGui;
-
-import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -14,11 +11,8 @@ public class Main {
                 frame.setVisible(true);
             }
         });
-
-        Generation testBigInteger = new Generation();
-        testBigInteger.calculationBigInteger(2019,65);
+        //Generation testBigInteger = new Generation();
+        //testBigInteger.calculationBigInteger(2019,65);
     }
-
-
 }
     

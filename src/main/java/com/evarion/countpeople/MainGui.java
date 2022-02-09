@@ -1,4 +1,4 @@
-package gui;
+package com.evarion.countpeople;
 
 import javax.swing.*;
 import java.awt.*;
