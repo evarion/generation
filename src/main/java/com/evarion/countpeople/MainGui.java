@@ -1,12 +1,11 @@
 package com.evarion.countpeople;
 
-import javax.imageio.ImageIO;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
+
 
 
 public class MainGui extends JFrame {
@@ -34,7 +33,7 @@ public class MainGui extends JFrame {
     //JButton buttonExit = new JButton("Exit");
 
     JLabel labelYear = new JLabel("ВВЕДИТЕ ГОД ВАШЕГО РОЖДЕНИЯ");
-    JLabel labelGeneration = new JLabel("ВВЕДИТЕ ЧИСЛО ПОКОЛЕНИЙ");
+    //JLabel labelGeneration = new JLabel("ВВЕДИТЕ ЧИСЛО ПОКОЛЕНИЙ");
 
 
     JTextArea textResultArea = new JTextArea();
@@ -66,7 +65,7 @@ public class MainGui extends JFrame {
         jPaneLeftTop.add(labelYear);
         jPaneLeftTop.add(jPanelEmpty1);
         jPaneLeftTop.add(inputCountGeneration);
-        jPaneLeftTop.add(labelGeneration);
+        //jPaneLeftTop.add(labelGeneration);
         jPaneLeftTop.add(jPanelEmpty2);
         jPaneLeftTop.add(buttonOk);
 
