@@ -11,7 +11,7 @@ public class Generation {
         this.yearStart = yearStart;
         this.countGeneration = countGeneration;
 
-        BigInteger count = new BigInteger("2");
+        BigInteger count = new BigInteger("1");
         BigInteger multiply = new BigInteger("2");
 
         int minYear;
@@ -23,12 +23,12 @@ public class Generation {
             yearStart = yearStart - 33;
             if (yearStart > 0) {
                 result = result + i + ". на: " + yearStart + " год" + " - количество предков: " + count + " человека" + "\n";
-                // System.out.println(i + ". на: " + yearStart + " год" + " - количество предков: " + count + " человека");
+                //System.out.println(i + ". на: " + yearStart + " год" + " - количество предков: " + count + " человека"+"  11111");
             } else {
                 minYear = yearStart;
                 minYear = -minYear;
                 result = result + i + ". на: " + minYear + " год до Н.Э." + " - количество предков: " + count + " человека" + "\n";
-                //System.out.println(i + ". на: " + minYear + " год до Н.Э." + " - количество предков: " + count + " человека");
+                //System.out.println(i + ". на: " + minYear + " год до Н.Э." + " - количество предков: " + count + " человека+  1111");
             }
         }
         return result;
